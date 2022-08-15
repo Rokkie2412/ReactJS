@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  background-color: #393E46;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.peoplebar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon{
+  background-color: #393E46;
+  padding: 4px;
+  border-radius: 50px;
+  cursor: pointer;
+}

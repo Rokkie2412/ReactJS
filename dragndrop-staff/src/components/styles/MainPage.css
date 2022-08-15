@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.mainContainer{
+    height: 100vh;
+}
+
+.headerSection{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 26px;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 5px solid #00ADB5;
+}
+
+.headerSection h2{
+    color: azure
+}
+
+.Body{
+    width: 100%;
+    margin-top: 12px;
+}
+
+.columnSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+
+.columnContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-self: center;
+}
+
+.columnContainer h2{
+    background-color: #00ADB5;
+    padding: 20px;
+}
+
+.list{
+    background-color: #00ADB5;
+    color: azure;
+    margin: 6px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list .peoplebar{
+    font-weight: 500;
+    color: #222831;
+    cursor: pointer;
+    padding: 14px;
+}
+
+.icon{
+    align-self: center;
+    margin-right: 6px;
+}
+
+.addCatagorize{
+    outline: none;
+    border: none;
+    background-color: #00ADB5;
+    margin-top:10px;
+    padding: 15px;
+    cursor: pointer;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 4px;
+}
+
+.Dump{
+    position: absolute;
+    padding: 18px 20px 18px 20px;
+    background-color: #16c3cc;
+    bottom: 10px;
+    left: 95%;
+    height: auto;
+    border-radius: 50px;
+    color: #eee;
+}
+
+.Add{
+    display: flex;
+    flex-direction: column;
+    
+}
