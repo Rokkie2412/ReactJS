@@ -1,0 +1,70 @@
+.ModalContainer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.4);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModalContent {
+    width: 375px;
+    height: auto;
+    border-radius: 11px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.IconSection {
+    display: flex;
+    justify-content: center;
+}
+
+.IconWarning {
+    color: #4fa2d7;
+    font-size: 50px;
+    margin: 0px 0px 20px 0px;
+}
+
+.Body p {
+    color: #969696;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 70px 0px 70px;
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.Footer .ButtonYes {
+    border: none;
+    background-color: #4fa2d7;
+    padding: 12px 40px 12px 40px;
+    border-radius: 10px;
+    color: #d3e8f5;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Footer .ButtonCancel {
+    border: none;
+    padding: 12px 40px 12px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #969696;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Body input{
+    width: 350px;
+    align-items: center;
+    margin-top: 10px;
+}
