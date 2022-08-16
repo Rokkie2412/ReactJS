@@ -1,3 +1,5 @@
+import { setSelectionRange } from "@testing-library/user-event/dist/utils";
+
 export const DragEnd = (res, kolom, setKolom) => {
   if (!res.destination) return;
   console.log(res);
@@ -56,4 +58,44 @@ export const closeModal = (setModal) => {
 
 export const openModal = (setModal) => {
   setModal(true);
+};
+
+export const addNewPersonIte = (
+  setKolom,
+  data,
+  nama,
+  usia,
+  alamat,
+  kota,
+  telp,
+  karyawan
+) => {
+  setKolom((prev) => ({
+    ...prev,
+    [data]: {
+      ...prev[data],
+      isikolom: prev[data].isikolom.concat({
+        nama: nama,
+        usia: usia,
+        alamat: alamat,
+        kota: kota,
+        telepon: telp,
+        nomorKaryawan: karyawan,
+      }),
+    },
+  }));
+};
+
+export const addCatagorize = (setKolom, name) => {
+  setKolom((prev) => ({
+    ...prev,
+    [name]: {
+      namakolom: name,
+      isikolom: [],
+    },
+  }));
+};
+
+export const AddItemtoSelect = (setSelect, name) => {
+  setSelect((prev) => [...prev, { value: name, label: name }]);
 };

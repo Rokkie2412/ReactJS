@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { closeModal } from "../Func/MainPageFunction";
+import {
+  closeModal,
+  addCatagorize,
+  AddItemtoSelect,
+} from "../Func/MainPageFunction";
 import "../styles/AddCatagorize.css";
-import { v4 } from "uuid";
 
 function AddCatagorizeModal({ setmodal, setkolom, kolom, Select, setSelect }) {
   const [name, setname] = useState("");
@@ -23,14 +26,8 @@ function AddCatagorizeModal({ setmodal, setkolom, kolom, Select, setSelect }) {
           </button>
           <button
             onClick={(e) => {
-              setkolom((prev) => ({
-                ...prev,
-                [name]: {
-                  namakolom: name,
-                  isikolom: [],
-                },
-              }));
-              setSelect((prev) => [...prev, { value: name, label: name }]);
+              addCatagorize(setkolom, name);
+              AddItemtoSelect(setSelect, name);
               console.log(Select);
               setmodal(false);
               setname("");

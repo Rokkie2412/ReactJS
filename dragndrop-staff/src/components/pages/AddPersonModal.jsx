@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import "../styles/AddPersonModal.css";
-import { closeModal } from "../Func/MainPageFunction";
+import { closeModal, addNewPersonIte } from "../Func/MainPageFunction";
 
 function AddPersonModal({ setModal, options, setKolom, kolom }) {
   const [nama, setNama] = useState("");
@@ -91,21 +91,16 @@ function AddPersonModal({ setModal, options, setKolom, kolom }) {
             <button
               onClick={() => {
                 const getValue = selectValue.value;
-                console.log(getValue);
-                setKolom((prev) => ({
-                  ...prev, // current kolom
-                  getValue: {
-                    ...prev[getValue], // current kolom["Main-Todo"]
-                    isikolom: prev[getValue].isikolom.concat({
-                      nama: nama,
-                      usia: usia,
-                      alamat: alamat,
-                      kota: kota,
-                      telepon: telp,
-                      nomorKaryawan: karyawan,
-                    }), // new items
-                  },
-                }));
+                addNewPersonIte(
+                  setKolom,
+                  getValue,
+                  nama,
+                  usia,
+                  alamat,
+                  kota,
+                  telp,
+                  karyawan
+                );
                 closeModal(setModal);
               }}
               id="added"
