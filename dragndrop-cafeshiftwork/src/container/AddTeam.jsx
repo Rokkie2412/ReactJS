@@ -2,26 +2,13 @@ import * as React from "react";
 import Select from "react-select";
 import "../styles/modal.css";
 import { AddTeamFunction } from "../function";
+import { customStylesForSelect } from "../data";
 
-const AddTeam = ({ setModal, select, data, setData }) => {
+const AddTeam = ({ setModal, select, data, setData, setSelect }) => {
   const [teamName, setTeamName] = React.useState("");
   const [teamId, setTeamId] = React.useState("");
   const [selected, setSelected] = React.useState("");
-  const customStylesForSelect = {
-    option: (provided, state) => ({
-      ...provided,
-      color: state.isSelected ? "red" : "#333",
-      padding: 10,
-    }),
-    control: (base, state) => ({
-      ...base,
-      border: "2px solid #333",
-      boxShadow: state.isFocused ? 0 : 0,
-      "&:hover": {
-        border: state.isFocused ? "2px solid #222" : "2px solid #333",
-      },
-    }),
-  };
+
   return (
     <div className="overlay">
       <div className="content">
@@ -51,6 +38,10 @@ const AddTeam = ({ setModal, select, data, setData }) => {
           <button
             onClick={() => {
               AddTeamFunction(selected, teamName, teamId, data, setData);
+              setSelect((prevData) => [
+                ...prevData,
+                { value: teamName, label: teamName },
+              ]);
               setTeamId("");
               setSelected("");
               setTeamName("");

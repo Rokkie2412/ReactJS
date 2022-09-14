@@ -15,6 +15,12 @@ const Main = () => {
     { value: "Morning Shift", label: "Morning Shift" },
     { value: "Afternoon Shift", label: "Afternoon Shift" },
   ]);
+  const [selectTeam, setSelectTeam] = useState([
+    { value: "Team-A", label: "Team-A" },
+    { value: "Team-B", label: "Team-B" },
+    { value: "Team-C", label: "Team-C" },
+    { value: "Team-D", label: "Team-D" },
+  ]);
   return (
     <div className="main-container">
       <header>
@@ -46,9 +52,17 @@ const Main = () => {
           select={select}
           data={item}
           setData={setItem}
+          setSelect={setSelectTeam}
         />
       )}
-      {addPersonModal && <AddPerson setModal={setAddPersonModal} />}
+      {addPersonModal && (
+        <AddPerson
+          setModal={setAddPersonModal}
+          selectData={selectTeam}
+          data={item}
+          setData={setItem}
+        />
+      )}
     </div>
   );
 };

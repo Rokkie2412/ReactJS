@@ -64,3 +64,16 @@ export const AddTeamFunction = (select, teamname, id, data, setData) => {
   findDataFromSelect.workingPerson.push(newObjectToPush);
   setData(data);
 };
+
+export const AddPersonFunction = (select, Name, Id, data, setData) => {
+  const getSelectValue = select.value;
+  const findDataFromSelect = data
+    .flatMap((dt) => dt.workingPerson)
+    .find((c) => c.teamName === getSelectValue);
+  const newPersonToPush = {
+    name: Name,
+    personId: Id,
+  };
+  findDataFromSelect.teamMember.push(newPersonToPush);
+  setData(data);
+};

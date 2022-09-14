@@ -100,3 +100,19 @@ export const itemDataShift = [
     ],
   },
 ];
+
+export const customStylesForSelect = {
+  option: (provided, state) => ({
+    ...provided,
+    color: state.isSelected ? "#fff" : "#333",
+    padding: 10,
+  }),
+  control: (base, state) => ({
+    ...base,
+    border: "2px solid #333",
+    boxShadow: state.isFocused ? 0 : 0,
+    "&:hover": {
+      border: state.isFocused ? "2px solid #222" : "2px solid #333",
+    },
+  }),
+};
