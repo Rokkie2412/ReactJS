@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+}
+
+header h1{
+    text-align: center;
+        padding: 1.2rem;
+        color: #233;
+        font-size: 2.5rem;
+}
+
+header{
+    border-bottom: 5px solid rgb(177, 175, 175);
+}
+
+.container-droppable{
+    margin:10px 20px 5px 12px
+}
+
+.container-droppable h2{
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.container-dragndrop{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.member-container h4{
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.titleteam{
+    background-color:rgb(66, 66, 66);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.titleteam h3{
+    text-align: center;
+    color: #eee;
+    padding: 3px;
+}
+
+.button-section{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.button-section button{
+    border: 2px solid #333;
+    padding: 12px;
+    background-color: #eee;
+    margin-left: 12px;
+    transition: 0.3s all;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.button-section button:hover{
+    background-color: #333;
+    color: #eee;
+}
+

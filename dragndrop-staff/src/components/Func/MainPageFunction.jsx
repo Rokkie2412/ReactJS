@@ -1,6 +1,8 @@
+//@flow
+
 import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 
-export const DragEnd = (res, kolom, setKolom) => {
+export const DragEnd = (res, kolom, setKolom): void => {
   if (!res.destination) return;
   console.log(res);
   if (
@@ -52,7 +54,7 @@ export const DragEnd = (res, kolom, setKolom) => {
   }
 };
 
-export const closeModal = (setModal) => {
+export const closeModal = (setModal): void => {
   setModal(false);
 };
 
