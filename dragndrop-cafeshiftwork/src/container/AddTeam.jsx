@@ -49,9 +49,13 @@ const AddTeam = ({ setModal, select, data, setData }) => {
         <div className="button-modal">
           <button onClick={() => setModal(false)}>Cancel</button>
           <button
-            onClick={() =>
-              AddTeamFunction(selected, teamName, teamId, data, setData)
-            }
+            onClick={() => {
+              AddTeamFunction(selected, teamName, teamId, data, setData);
+              setTeamId("");
+              setSelected("");
+              setTeamName("");
+              setModal(false);
+            }}
           >
             Add Team
           </button>

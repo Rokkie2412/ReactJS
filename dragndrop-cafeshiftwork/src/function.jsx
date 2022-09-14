@@ -57,8 +57,10 @@ export const AddTeamFunction = (select, teamname, id, data, setData) => {
   const getSelectValue = select.value;
   const findDataFromSelect = data.find((c) => c.shiftName === getSelectValue);
   const newObjectToPush = {
-    Teamname: teamname,
+    teamName: teamname,
     teamId: id,
     teamMember: [],
   };
+  findDataFromSelect.workingPerson.push(newObjectToPush);
+  setData(data);
 };
