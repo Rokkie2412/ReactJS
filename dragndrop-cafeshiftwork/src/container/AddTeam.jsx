@@ -8,6 +8,24 @@ const AddTeam = ({ setModal, select, data, setData, setSelect }) => {
   const [teamName, setTeamName] = React.useState("");
   const [teamId, setTeamId] = React.useState("");
   const [selected, setSelected] = React.useState("");
+  const [errorMessage, setErrorMessage] = React.useState("");
+
+  const errorHandler = () => {
+    if (teamName.length <= 3 && teamId.length === 0 && selected.length === 0) {
+      setErrorMessage("make sure all data has been filled");
+    } else {
+      AddTeamFunction(selected, teamName, teamId, data, setData);
+      setSelect((prevData) => [
+        ...prevData,
+        { value: teamName, label: teamName },
+      ]);
+      setTeamId("");
+      setErrorMessage("");
+      setSelected("");
+      setTeamName("");
+      setModal(false);
+    }
+  };
 
   return (
     <div className="overlay">
@@ -33,23 +51,10 @@ const AddTeam = ({ setModal, select, data, setData, setSelect }) => {
           value={selected}
           onChange={(e) => setSelected(e)}
         />
+        <p className="ErrorMessage">{errorMessage}</p>
         <div className="button-modal">
           <button onClick={() => setModal(false)}>Cancel</button>
-          <button
-            onClick={() => {
-              AddTeamFunction(selected, teamName, teamId, data, setData);
-              setSelect((prevData) => [
-                ...prevData,
-                { value: teamName, label: teamName },
-              ]);
-              setTeamId("");
-              setSelected("");
-              setTeamName("");
-              setModal(false);
-            }}
-          >
-            Add Team
-          </button>
+          <button onClick={errorHandler}>Add Team</button>
         </div>
       </div>
     </div>

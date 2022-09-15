@@ -4,6 +4,22 @@ import { AddShiftFunction } from "../function";
 
 const AddShift = ({ setModal, data, setdata, setSelect }) => {
   const [newShift, setNewShift] = React.useState("");
+  const [errorMessage, setErrorMessage] = React.useState("");
+  const errorHandler = () => {
+    if (newShift.length < 3) {
+      setErrorMessage("make sure all data has been filled");
+    } else {
+      AddShiftFunction(data, setdata, newShift);
+      setNewShift("");
+      setErrorMessage("");
+      setModal(false);
+      setSelect((prevData) => [
+        ...prevData,
+        { value: newShift, label: newShift },
+      ]);
+    }
+  };
+
   return (
     <div className="overlay">
       <div className="content">
@@ -14,21 +30,10 @@ const AddShift = ({ setModal, data, setdata, setSelect }) => {
           onChange={(e) => setNewShift(e.target.value)}
           placeholder="Write here"
         />
+        <p className="ErrorMessage">{errorMessage}</p>
         <div className="button-modal">
           <button onClick={() => setModal(false)}>Cancel</button>
-          <button
-            onClick={() => {
-              AddShiftFunction(data, setdata, newShift);
-              setNewShift("");
-              setModal(false);
-              setSelect((prevData) => [
-                ...prevData,
-                { value: newShift, label: newShift },
-              ]);
-            }}
-          >
-            Add shift
-          </button>
+          <button onClick={errorHandler}>Add shift</button>
         </div>
       </div>
     </div>

@@ -68,3 +68,8 @@
     margin: 12px;
     width: 21rem;
 }
+
+.ErrorMessage{
+    color: red;
+    font-size: 10px;
+}

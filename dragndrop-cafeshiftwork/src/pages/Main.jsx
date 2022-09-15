@@ -5,6 +5,7 @@ import DragDropHandler from "../container/DragDropHandler";
 import AddShift from "../container/AddShift";
 import AddTeam from "../container/AddTeam";
 import AddPerson from "../container/AddPerson";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 
 const Main = () => {
   const [item, setItem] = useState(itemDataShift);
@@ -37,7 +38,9 @@ const Main = () => {
           </button>
         </div>
       </header>
-      <DragDropHandler data={item} setData={setItem} />
+      <ScrollMenu>
+        <DragDropHandler data={item} setData={setItem} />
+      </ScrollMenu>
       {addShiftModal && (
         <AddShift
           setModal={setAddShiftModal}
