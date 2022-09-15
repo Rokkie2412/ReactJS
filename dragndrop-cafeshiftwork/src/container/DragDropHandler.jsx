@@ -1,7 +1,9 @@
-import React from "react";
+import * as React from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { Dragend } from "../function";
-const DragDropHandler = ({ data, setData }) => {
+import type { dnd } from "../../All.type";
+
+const DragDropHandler = ({ data, setData }: dnd): React.Node => {
   return (
     <DragDropContext onDragEnd={(res) => Dragend(data, setData, res)}>
       <div className="container-dragndrop">
@@ -9,7 +11,7 @@ const DragDropHandler = ({ data, setData }) => {
           <div key={item.shiftId} className="container-droppable">
             <h2>{item.shiftName}</h2>
             <Droppable droppableId={item.shiftId} type="team">
-              {(provided, snapshot) => (
+              {(provided: any, snapshot: any) => (
                 <div
                   ref={provided.innerRef}
                   {...provided.droppableProps}
@@ -40,7 +42,7 @@ const DragDropHandler = ({ data, setData }) => {
                               droppableId={team.teamId}
                               key={team.teamId}
                             >
-                              {(provided, snapshot) => (
+                              {(provided: any, snapshot: any) => (
                                 <div>
                                   <div
                                     ref={provided.innerRef}
@@ -52,7 +54,7 @@ const DragDropHandler = ({ data, setData }) => {
                                         index={index}
                                         key={member.personId}
                                       >
-                                        {(provided) => (
+                                        {(provided: any) => (
                                           <div className="member">
                                             <div
                                               ref={provided.innerRef}
@@ -68,16 +70,19 @@ const DragDropHandler = ({ data, setData }) => {
                                       </Draggable>
                                     ))}
                                   </div>
+
                                   {provided.placeholder}
                                 </div>
                               )}
                             </Droppable>
                           </div>
+
                           {provided.placeholder}
                         </div>
                       )}
                     </Draggable>
                   ))}
+
                   {provided.placeholder}
                 </div>
               )}

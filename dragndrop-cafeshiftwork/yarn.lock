@@ -4521,6 +4521,11 @@ flatted@^3.1.0:
   resolved "https://nxrm.jenius.tech/repository/npm-group/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
+flow-bin@^0.186.0:
+  version "0.186.0"
+  resolved "https://nxrm.jenius.tech/repository/npm-group/flow-bin/-/flow-bin-0.186.0.tgz#b60b720dea977516db8e77fdd3911f66e86c6378"
+  integrity sha512-p5g03TsAipO6Wu22rpphRZQ9EYuhVWANN698MRLWRyP7ZtkEyCpFHDfmzRHM4Ym/tbCQCMdLJ9JX/GmuiDsB2w==
+
 follow-redirects@^1.0.0:
   version "1.15.1"
   resolved "https://nxrm.jenius.tech/repository/npm-group/follow-redirects/-/follow-redirects-1.15.1.tgz#0ca6a452306c9b276e4d3127483e29575e207ad5"

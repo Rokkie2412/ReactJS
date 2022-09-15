@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/resolve/test/resolver/malformed_package_json/package.json
+
+[include]
+
+[libs]
+flow-typed
+
+[lints]
+
+[options]
+
+[strict]

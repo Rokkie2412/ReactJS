@@ -1,11 +1,19 @@
+//@flow
+
 import * as React from "react";
 import "../styles/modal.css";
 import { AddShiftFunction } from "../function";
+import type { AddShiftType } from "../../All.type";
 
-const AddShift = ({ setModal, data, setdata, setSelect }) => {
+const AddShift = ({
+  setModal,
+  data,
+  setdata,
+  setSelect,
+}: AddShiftType): React.Node => {
   const [newShift, setNewShift] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
-  const errorHandler = () => {
+  const errorHandler = (): void => {
     if (newShift.length < 3) {
       setErrorMessage("make sure all data has been filled");
     } else {

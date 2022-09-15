@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+//@flow
+
+import { useState } from "react";
+import * as React from "react";
 import "../styles/style.css";
 import { itemDataShift } from "../data";
 import DragDropHandler from "../container/DragDropHandler";
@@ -8,7 +11,7 @@ import AddPerson from "../container/AddPerson";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import Footer from "../container/Footer";
 
-const Main = () => {
+const Main = (): React.Node => {
   const [item, setItem] = useState(itemDataShift);
   const [addShiftModal, setAddShiftModal] = useState(false);
   const [addTeamModal, setAddTeamModal] = useState(false);

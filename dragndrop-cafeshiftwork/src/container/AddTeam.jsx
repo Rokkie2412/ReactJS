@@ -1,10 +1,19 @@
+//@flow
+
 import * as React from "react";
 import Select from "react-select";
 import "../styles/modal.css";
 import { AddTeamFunction } from "../function";
 import { customStylesForSelect } from "../data";
+import type { AddTeamType } from "../../All.type";
 
-const AddTeam = ({ setModal, select, data, setData, setSelect }) => {
+const AddTeam = ({
+  setModal,
+  select,
+  data,
+  setData,
+  setSelect,
+}: AddTeamType): React.Node => {
   const [teamName, setTeamName] = React.useState("");
   const [teamId, setTeamId] = React.useState("");
   const [selected, setSelected] = React.useState("");

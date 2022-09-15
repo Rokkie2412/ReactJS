@@ -1,17 +1,25 @@
+//@flow
+
 import * as React from "react";
 import "../styles/modal.css";
 import Select from "react-select";
 import { customStylesForSelect } from "../data";
 import { AddPersonFunction } from "../function";
+import type { AddPersonType } from "../../All.type";
 
-const AddPerson = ({ setModal, selectData, data, setData }) => {
+const AddPerson = ({
+  setModal,
+  selectData,
+  data,
+  setData,
+}: AddPersonType): React.Node => {
   const [name, setName] = React.useState("");
   const [id, setId] = React.useState("");
   const [select, setSelect] = React.useState("");
   const [errorMessage, setErrorMessage] = React.useState("");
 
   const errorHandler = () => {
-    if (name.length <= 3 && id.isEmpty()) {
+    if (name.length <= 3 && id.length === 0) {
       setErrorMessage("Make sure all data has been filled");
     } else {
       AddPersonFunction(select, name, id, data, setData);

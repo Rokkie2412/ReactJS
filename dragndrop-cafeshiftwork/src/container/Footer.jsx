@@ -1,6 +1,8 @@
-import React from "react";
+//@flow
 
-const Footer = () => {
+import * as React from "react";
+
+const Footer = (): React.Node => {
   return (
     <div className="footer-Container">
       <p>ReactJS Nested Library</p>
