@@ -6,6 +6,7 @@ import AddShift from "../container/AddShift";
 import AddTeam from "../container/AddTeam";
 import AddPerson from "../container/AddPerson";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
+import Footer from "../container/Footer";
 
 const Main = () => {
   const [item, setItem] = useState(itemDataShift);
@@ -66,6 +67,7 @@ const Main = () => {
           setData={setItem}
         />
       )}
+      <Footer />
     </div>
   );
 };

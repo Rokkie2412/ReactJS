@@ -80,3 +80,46 @@ header{
     color: #eee;
 }
 
+.footer-Container{
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 2px solid #333;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-Container p{
+    text-align: center;
+}
+
+.credit-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.credit-left{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 6px;
+
+}
+
+.credit{
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-right{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 6px;
+}
+
+.credit a{
+    color: #333;
+}
