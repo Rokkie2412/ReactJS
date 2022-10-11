@@ -1,0 +1,12 @@
+.person h4{
+    background-color: #4fa2d7;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.droppable2{
+    background-color:#eee;
+    padding: 5px;
+    border-radius: 0px 0px 7px 7px;
+}

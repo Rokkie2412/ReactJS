@@ -1,0 +1,32 @@
+.DroopableTeam-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.first-dropable{
+    margin: 12px;
+}
+
+.first-dropable h2{
+    background-color: #4fa2d7;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.drop{
+    border-radius: 0px 0px 8px 8px;
+}
+
+.person-wrapper{
+    background-color:rgb(167, 163, 163);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.person-wrapper h3{
+    background-color: #4fa2d7;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px 6px 0px 0px;
+}
