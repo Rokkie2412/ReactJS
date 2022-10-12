@@ -18,8 +18,6 @@ import {
   DirectionsRenderer, //untuk nunjukin jalan
 } from "@react-google-maps/api";
 import * as React from "react";
-
-// const Center = { lat: -6.905977, lng: 107.613144 };
 const libari = ["places"];
 
 //------------------------------------------------------------------------------
@@ -76,6 +74,7 @@ function App() {
   }
 
   const calculateRoute = async () => {
+    //fungsi untuk ngukur jarak waktu dan nyari rute
     if (originRef.current.value === "" || destinationRef.current.value === "") {
       return;
     }
