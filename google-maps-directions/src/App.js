@@ -117,7 +117,10 @@ function App() {
           options={{
             streetViewControl: false,
           }}
-          onLoad={(map) => setMap(map)}
+          onLoad={(map) => {
+            console.log(map);
+            setMap(map);
+          }}
         >
           {/* Display Marker or flexDirection */}
           <Marker position={Center} />
