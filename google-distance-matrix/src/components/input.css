@@ -1,0 +1,13 @@
+.inputan{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputan input{
+    border: none;
+    width: 90%;
+    outline: none;
+    margin: 10px;
+    padding: 5px;
+    
+}
